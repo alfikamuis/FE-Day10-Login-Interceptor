@@ -10,11 +10,22 @@
           <a class="nav-link active" aria-current="page" href="#"
             routerLink="/home"
             routerLinkActive="active"
+            (click)="ngOnInit()"
           >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"
-            routerLink="/dashboard"
+          <a *ngIf="!isLogin" 
+            class="nav-link" 
+            href="#"
+            (isActiveChange)="checkLogin()"
+            routerLink="/login"
+            routerLinkActive="active"
+          >Passanger</a>
+          <a *ngIf="isLogin"
+            class="nav-link" 
+            href="#"
+            (isActiveChange)="checkLogin()"
+            routerLink="/passanger"
             routerLinkActive="active"
           >Passanger</a>
         </li>
@@ -29,8 +40,8 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <li *ngIf="isLogin" class="nav-item ">
+          <a class="nav-link" href="#" (click)="logout()">Logout</a>
         </li>
       </ul>
       <form class="d-flex">

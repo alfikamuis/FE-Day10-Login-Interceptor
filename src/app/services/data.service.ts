@@ -9,8 +9,7 @@ import { User } from '../models/user';
 export class DataService {
 
   private userData: User[] = [];
-  constructor(private router: Router,) { }
-
+  constructor(private router: Router) { }
 
   getList(): Observable<User[]> {
     this.userData.push(
@@ -18,6 +17,7 @@ export class DataService {
       { id: 2, nama: "muis", kota: "malang" }
     )
     return of(this.userData);
+    console.log(this.userData);
   }
 
   add(row: User, newData: User[]){

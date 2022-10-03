@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit, OnDestroy{
   updateData: User | null = null;
   isAdd: boolean = true;
   
-  subs!: Subscription ;
+  subs!: Subscription | any;
 
   constructor(
     private dataService: DataService,
@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit, OnDestroy{
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
+    this.subs = null;
   }
 
   ngOnInit(): void {
