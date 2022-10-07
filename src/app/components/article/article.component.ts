@@ -14,6 +14,7 @@ import { PublishService } from 'src/app/services/publish.service';
 export class ArticleComponent implements OnInit {
 
   article: Article[] = [];
+
   publishData: Published = {
     id: 0,
     articleId: 0,
@@ -33,6 +34,11 @@ export class ArticleComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.article.push({
+      id: 1,
+      title: "angular 14",
+      description: "how to make modular SAP in angular"
+    })
     this.getList();
   }
 

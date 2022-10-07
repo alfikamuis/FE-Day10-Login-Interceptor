@@ -20,7 +20,7 @@ import { EditComponent } from './components/article/edit/edit.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PublishService } from './services/publish.service';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import { AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import { CardModule, } from 'primeng/card';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AuthInterceptor } from './shared/authconfig.interceptor';
