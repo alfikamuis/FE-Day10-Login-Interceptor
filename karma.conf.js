@@ -30,9 +30,6 @@ module.exports = function (config) {
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
-<<<<<<< HEAD
-      ]
-=======
       ],
       check: {
         global: {
@@ -42,7 +39,6 @@ module.exports = function (config) {
           lines: 80
         }
       }
->>>>>>> updates
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,

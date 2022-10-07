@@ -1,8 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-<<<<<<< HEAD
-
-=======
->>>>>>> updates
 import { DataService } from './data.service';
 
 describe('DataService', () => {
@@ -13,12 +9,6 @@ describe('DataService', () => {
     service = TestBed.inject(DataService);
   });
 
-<<<<<<< HEAD
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
-=======
   it('should return equal value of 2 from listed array user',
     (done: DoneFn) => {
       service.getList().subscribe(value => {
@@ -67,4 +57,3 @@ describe('DataService', () => {
 
 });
 
->>>>>>> updates

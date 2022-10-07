@@ -9,7 +9,7 @@ import { PassangerComponent } from './components/passanger/passanger.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewComponent } from './components/view/view.component';
 import { UpdateComponent } from './components/update/update.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {  NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { DataService } from './services/data.service';
 import { ArticleComponent } from './components/article/article.component';
@@ -24,6 +24,7 @@ import {AccordionModule} from 'primeng/accordion';     //accordion and accordion
 import { CardModule, } from 'primeng/card';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AuthInterceptor } from './shared/authconfig.interceptor';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AuthInterceptor } from './shared/authconfig.interceptor';
     CreateComponent,
     EditComponent,
     RegisterComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
