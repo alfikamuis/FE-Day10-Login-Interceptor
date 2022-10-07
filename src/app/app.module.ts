@@ -13,6 +13,21 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { DataService } from './services/data.service';
 import { LoginComponent } from './components/login/login.component';
+<<<<<<< HEAD
+=======
+import { ArticleComponent } from './components/article/article.component';
+import { ArticleService } from './services/article.service';
+import { HttpClientModule,HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { CreateComponent } from './components/article/create/create.component';
+import { EditComponent } from './components/article/edit/edit.component';
+import { RegisterComponent } from './components/register/register.component';
+import { PublishService } from './services/publish.service';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import { CardModule, } from 'primeng/card';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AuthInterceptor } from './shared/authconfig.interceptor';
+>>>>>>> updates
 
 @NgModule({
   declarations: [
@@ -23,16 +38,41 @@ import { LoginComponent } from './components/login/login.component';
     ViewComponent,
     UpdateComponent,
     HomeComponent,
+<<<<<<< HEAD
     LoginComponent
+=======
+    LoginComponent,
+    ArticleComponent,
+    CreateComponent,
+    EditComponent,
+    RegisterComponent,
+    AboutUsComponent
+>>>>>>> updates
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+<<<<<<< HEAD
     NgbModule
   ],
   providers: [DataService],
+=======
+    NgbModule,
+    HttpClientModule,
+    AccordionModule,
+    CardModule,
+    BrowserAnimationsModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    DataService,ArticleService,PublishService],
+>>>>>>> updates
   bootstrap: [AppComponent]
 })
 export class AppModule { }

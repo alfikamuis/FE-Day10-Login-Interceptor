@@ -10,6 +10,17 @@ export class DataService {
 
   private userData: User[] = [];
   constructor(private router: Router) { }
+<<<<<<< HEAD
+=======
+  
+  getUserData(): User[] {
+    return this.userData;
+  }
+
+  setUserData(payload: User) {
+    this.userData.push(payload);
+  }
+>>>>>>> updates
 
   getList(): Observable<User[]> {
     this.userData.push(
