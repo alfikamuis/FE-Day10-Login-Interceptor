@@ -65,7 +65,7 @@ export class AuthService {
       catchError(this.handleError)
     );
   }
-  
+
   // Error
   handleError(error: HttpErrorResponse) {
     let msg = '';
