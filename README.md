@@ -1,10 +1,25 @@
-# FE-Day9-Login-Interceptor
+# FE-Day9-Login-Interceptor (server available on server.branch)
 
-- server on server.branch
+- interceptor clone the header for jwt auth
+  ```diff
+    export class AuthInterceptor implements HttpInterceptor {
 
+    constructor(private authService: AuthService) { }
+      intercept(req: HttpRequest<any>, next: HttpHandler) {
+          const authToken = this.authService.getToken();
+  +       req = req.clone({
+  +           setHeaders: {
+  +               Authorization: "Bearer " + authToken
+              }
+          });
+          return next.handle(req);
+      }
+    }
+  ```
+<details><summary><b>For Documentation Click Here <<</b></summary>
+  
 ![image](https://user-images.githubusercontent.com/38674801/193678958-1f0cb729-02b3-487d-84e6-d17b82d78bda.png)
-
-## click passanger and redirect to form login with validator
+  ## click passanger and redirect to form login with validator
 ![image](https://user-images.githubusercontent.com/38674801/193679210-d5f2b255-c161-4e0a-bd90-438a2b9427d9.png)
 ## fill the form and click submit
 ![image](https://user-images.githubusercontent.com/38674801/193679303-25cf1907-7aca-473f-8e8d-2b16937e4c18.png)
@@ -16,3 +31,14 @@
 ## redirect to home page
 ![image](https://user-images.githubusercontent.com/38674801/193679556-ca04833d-f7e0-488b-8440-7d487dd30ae7.png)
 
+</details>
+
+<details><summary><b>For schema DB Click Here <<</b></summary>
+  
+![image](https://user-images.githubusercontent.com/38674801/194594606-6e6d0a7f-fee7-4348-87fa-7086b636a0a6.png)
+</details>
+
+<details><summary><b>Add Form Registration (new)<<</b></summary>
+  
+![image](https://user-images.githubusercontent.com/38674801/194595146-85838a99-f28a-43cf-bc2c-df434b7ee228.png)
+</details>
