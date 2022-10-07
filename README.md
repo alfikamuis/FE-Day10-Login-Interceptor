@@ -69,3 +69,8 @@
 
   ![image](https://user-images.githubusercontent.com/38674801/194595146-85838a99-f28a-43cf-bc2c-df434b7ee228.png)
   </details>
+  
+- Article management used local db, to active it rune code below in terminal
+  ```sh
+  npm run json-run
+  ```
