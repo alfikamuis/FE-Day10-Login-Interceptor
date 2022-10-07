@@ -1,12 +1,5 @@
 # node-token-based-authentication
 
-Node Token-based Authentication REST APIs tutorial with examples - learn how to build a secure user authentication CRUD APIs using JSON web token.
-
-
-## Written Article
-[Build Secure (JWT) Token Based Authentication API with Node](https://www.positronx.io/build-secure-jwt-token-based-authentication-api-with-node/)
-
-
 ## Authentication REST APIs
 * GET (users list)	  **/api**
 * POST (sign-in)	      **/api/signin**
@@ -15,11 +8,29 @@ Node Token-based Authentication REST APIs tutorial with examples - learn how to 
 * PUT (update user)	  **/api/update-user/id**
 * DELETE (delete user)  **/api/delete-user/id**
 
+## Install 
+
+- open terminal
+  ```sh
+  cd <folder file>
+
+  npm install
+  npm install -g nodemon
+  npm install bcrypt body-parser config cors dotenv express express-validator jsonwebtoken mongoose mongoose-unique-validator
+
+  ```
+- install <b>mongoDb</b>
 
 ## Start Node Server
 
-- Run `npm install` to install required packages 
-- Open terminal run `nodemon`
 - Open other terminal run `mongod`
+  ```sh
+  cd <folder file>
+  mongod
+  ```
+- Open terminal run `nodemon`
+  ```sh
+  nodemon server.js
+  ```
 
 Open API URL on [http://localhost:4000/api](http://localhost:4000/api)
